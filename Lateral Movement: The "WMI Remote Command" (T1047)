@@ -1,0 +1,4 @@
+#event_simpleName=ProcessRollup2
+| ParentBaseFileName=wmiprvse.exe
+| FileName=/^(powershell|cmd|mshta|cscript)\.exe$/i
+| select([@timestamp, ComputerName, UserName, ParentBaseFileName, FileName, CommandLine])
