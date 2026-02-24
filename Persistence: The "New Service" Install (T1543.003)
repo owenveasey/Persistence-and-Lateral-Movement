@@ -1,0 +1,4 @@
+#event_simpleName=ServiceInstalled
+| ServiceName!=/.*(Google|Mozilla|Edge|Windows|CrowdStrike).*/i
+| select([@timestamp, ComputerName, UserName, ServiceName, ServiceType, ServiceStartType, ImagePath])
+| sort(@timestamp, order=desc)
