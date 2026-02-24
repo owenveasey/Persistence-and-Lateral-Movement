@@ -1,0 +1,3 @@
+#event_simpleName=FileTimestompEvent
+| FilePath=/.*(System32|SysWOW64).*/i
+| select([@timestamp, ComputerName, UserName, FileName, FilePath])
